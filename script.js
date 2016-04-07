@@ -14,10 +14,33 @@ var controller = new ScrollMagic.Controller({
 var scene1 = new ScrollMagic.Scene({
         //specifies options for the scene
         triggerElement:"#scene-1",
-        duration:3000,
-        triggerHook:0
+        duration:400,
+        triggerHook:0,
+        offset:0
     })
-    .on('progress',function(e){
-       console.log(e.progress);
+    .on('enter',function(e){
+    })
+    .addTo(controller);
+
+var scene2 = new ScrollMagic.Scene({
+    //specifies options for the scene
+    triggerElement:"#scene-2",
+    duration:400,
+    triggerHook:0,
+    offset:0
+})
+    .on('enter',function(e){
+    })
+    .addTo(controller);
+
+var scene3 = new ScrollMagic.Scene({
+    //specifies options for the scene
+    triggerElement:"#scene-3",
+    duration:400,
+    triggerHook:0,
+    offset:0
+})
+    .on('enter',function(e){
+        console.log("scene 3");
     })
     .addTo(controller);
